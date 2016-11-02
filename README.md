@@ -1,1 +1,1 @@
-# bookmanger
+# Angular 1.x with Redux

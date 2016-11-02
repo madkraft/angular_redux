@@ -3,8 +3,8 @@
 
   app.controller('MainController', MainController)
 
-  MainController.$inject = ['$timeout', 'categoriesReducer', 'AppStore']
-  function MainController ($timeout, categoriesReducer, AppStore) {
+  MainController.$inject = ['$timeout', 'categoriesReducer', 'AppStore', 'categoriesActions']
+  function MainController ($timeout, categoriesReducer, AppStore, categoriesActions) {
     var ctrl = this
     var currentCategory
 
@@ -12,8 +12,7 @@
     var unsub = store.subscribe(function () {
       ctrl.categories = store.getState()
     })
-    store.dispatch({type: 'GET_CATEGORIES'})
-
+    store.dispatch(categoriesActions.getCategories())
 
     $timeout(function () {
       var payload = [
@@ -21,7 +20,7 @@
         {id: 1, name: 'Anglar'}
       ]
 
-      store.dispatch({type: 'GET_CATEGORIES', payload: payload})
+      store.dispatch(categoriesActions.getCategories(payload))
       unsub()
     }, 3000)
 
@@ -30,12 +29,12 @@
         {id: 0, name: 'Uh oh'}
       ]
 
-      store.dispatch({type: 'GET_CATEGORIES', payload: payload})
+      store.dispatch(categoriesActions.getCategories(payload))
     }, 6000)
 
 
     ctrl.onCategoryClick = function onCategoryClick (category) {
-      currentCategory = categoriesReducer.category(currentCategory, {type: 'GET_CURRENT_CATEGORY', payload: category})
+      currentCategory = categoriesReducer.category(currentCategory, categoriesActions.selectCategory(category))
       console.log('currentCategory', currentCategory)
     }
 

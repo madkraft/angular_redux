@@ -1,7 +1,9 @@
 (function (app) {
   'use strict'
 
-  app.service('categoriesReducer', categoriesReducer)
+  app
+    .service('categoriesReducer', categoriesReducer)
+    .service('categoriesActions', categoriesActions)
 
   function categoriesReducer() {
     var initialCategories = [
@@ -41,6 +43,22 @@
       initialCategories: initialCategories,
       categories: categories,
       category: category
+    }
+  }
+
+  function categoriesActions () {
+
+    function getCategories (categories) {
+      return { type: 'GET_CATEGORIES', payload: categories }
+    }
+
+    function selectCategory (category) {
+      return { type: 'GET_CURRENT_CATEGORY', payload: category }
+    }
+
+    return {
+      getCategories: getCategories,
+      selectCategory: selectCategory
     }
   }
 
