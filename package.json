@@ -1,0 +1,23 @@
+{
+  "name": "angular_redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/madkraft/angular_redux.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "Anton Kostiuchkov <Anton.Kostiuchkov@teleste.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-eslint": "^3.0.0"
+  }
+}
