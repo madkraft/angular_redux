@@ -25,7 +25,7 @@
       }
     }
 
-    var category = function categories (state, args) {
+    var category = function category (state, args) {
       // debugger
       if (!state) {
         state = {}
