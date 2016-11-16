@@ -10,7 +10,7 @@ class ExampleController {
 
   $onInit () {
     this.store.subscribe(() => {
-      this.categories = this.store.getState()
+      this.examples = this.store.getState()
     })
 
     this.store.dispatch(this.ExampleActions.getExamples())

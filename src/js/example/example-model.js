@@ -1,5 +1,5 @@
 class ExampleModel {
-  constructor() {
+  constructor () {
     this.examples = [
       {'id': 1, 'title': 'AngularJS'},
       {'id': 2, 'title': 'Egghead.io'},

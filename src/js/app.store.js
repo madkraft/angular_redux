@@ -1,5 +1,5 @@
 class AppStore {
-  constructor(reducer, initialState) {
+  constructor (reducer, initialState) {
     this.reducer = reducer
     this.state = initialState
     this.listeners = []
