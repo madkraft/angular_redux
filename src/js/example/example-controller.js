@@ -1,13 +1,20 @@
-export default class ExampleController {
-  constructor (exampleService) {
+class ExampleController {
+  constructor (exampleService, exampleModel, ExampleActions, store) {
     'ngInject'
 
     this.controllerName = 'Example controller'
-    this.categories = [
-      {'id': 0, 'name': 'Development!'},
-      {'id': 1, 'name': 'Design'},
-      {'id': 2, 'name': 'Exercise'},
-      {'id': 3, 'name': 'Humor'}
-    ]
+    this.examples = exampleModel.getExamples()
+    this.store = store
+    this.ExampleActions = ExampleActions
+  }
+
+  $onInit () {
+    this.store.subscribe(() => {
+      this.categories = this.store.getState()
+    })
+
+    this.store.dispatch(this.ExampleActions.getExamples())
   }
 }
+
+export default ExampleController

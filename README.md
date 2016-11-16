@@ -1,11 +1,14 @@
 # Angular 1.x with Redux
 
-+ angular
-+ rollup
-+ stylus
-+ yarn
-+ es6
-+ redux
+TODO:
++ simple redux
++ ng-redux
++ ui-router
++ 1.5 component
 
-? CSS modules https://github.com/mtojo/rollup-plugin-stylus-css-modules
-? https://github.com/css-modules/css-modules
+DONE:
+
+
+MAYBE?
++ CSS modules https://github.com/css-modules/css-modules
++ webpack 2

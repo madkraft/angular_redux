@@ -1,14 +1,16 @@
 import '../styles/main.styl'
 import angular from 'angular'
-// import uiRouter from 'angular-ui-router'
+import Example from './example'
 
-import ExampleController from './example/example-controller'
-import ExampleService from './example/example-service'
+import { examples, initialExamples } from './example/example-state'
+import Store from './app.store'
+
+const store = new Store(examples, initialExamples)
 
 // Mount on window for testing
-window.app = angular.module('app', [])
-  .controller('exampleController', ExampleController)
-  .service('exampleService', ExampleService)
+window.app = angular.module('app', [
+  Example.name
+]).value('store', store)
 
 angular.bootstrap(document, ['app'], {
   strictDi: true
