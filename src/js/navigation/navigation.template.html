@@ -1,0 +1,14 @@
+ <nav class='top-nav top-nav-dark cf' role='navigation'>
+    <input id='menu-toggle' class='menu-toggle' type='checkbox'>
+    <label for='menu-toggle'>Menu</label>
+
+    <ul class='list-unstyled list-inline cf'>
+      <li ng-repeat="item in $ctrl.menu">
+        <a ui-sref={{item.state}}>{{item.name}}</a>
+      </li>
+      <li>
+        <a ui-sref="login">Login</a>
+      </li>
+
+    </ul>
+  </nav>
