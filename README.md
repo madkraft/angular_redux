@@ -3,10 +3,10 @@
 TODO:
 + simple redux
 + ng-redux
-+ ui-router
 + 1.5 component
 
 DONE:
++ ui-router
 
 
 MAYBE?
