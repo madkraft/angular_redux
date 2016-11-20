@@ -1,5 +1,3 @@
-import exampleTemplate from './example/example.html'
-
 export default function Config ($stateProvider, $urlRouterProvider) {
   'ngInject'
 
@@ -15,10 +13,4 @@ export default function Config ($stateProvider, $urlRouterProvider) {
     url: '/login',
     template: '<h1>Login</h1>'
   })
-  .state('example', {
-    url: '/example',
-    controller: 'exampleController as exampleCtrl',
-    template: exampleTemplate
-  })
 }
-

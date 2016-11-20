@@ -5,7 +5,6 @@ import uiRouter from 'angular-ui-router'
 import Config from './app.config'
 import Example from './example'
 
-// Mount on window for testing
 angular
   .module('app', [
     uiRouter,

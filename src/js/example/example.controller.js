@@ -1,4 +1,4 @@
-class ExampleController {
+export default class ExampleController {
   constructor (exampleService, exampleModel) {
     'ngInject'
 
@@ -6,5 +6,3 @@ class ExampleController {
     this.examples = exampleModel.getExamples()
   }
 }
-
-export default ExampleController

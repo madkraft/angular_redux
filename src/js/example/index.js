@@ -1,10 +1,12 @@
 import angular from 'angular'
 
-import ExampleController from './example-controller'
-import ExampleService from './example-service'
-import ExampleModel from './example-model'
+import exampleConfig from './example.config'
+import ExampleService from './example.service'
+import ExampleModel from './example.model'
+import ExampleComponent from './example.component'
 
 export default angular.module('Example', [])
-  .controller('exampleController', ExampleController)
+  .config(exampleConfig)
+  .component('example', ExampleComponent)
   .service('exampleService', ExampleService)
   .service('exampleModel', ExampleModel)

@@ -3,10 +3,11 @@
 TODO:
 + simple redux
 + ng-redux
-+ 1.5 component
 
 DONE:
++ 1.5 component
 + ui-router
++ source maps to debug es6s
 
 
 MAYBE?
