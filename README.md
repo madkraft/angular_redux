@@ -1,13 +1,11 @@
 # Angular 1.x with Redux
 
 TODO:
-+ simple redux
-+ ng-redux
-
-DONE:
-+ 1.5 component
-+ ui-router
-+ source maps to debug es6s
++ [x] simple redux
++ [ ] ng-redux
++ [x] 1.5 component
++ [x] ui-router
++ [x] source maps to debug es6s
 
 
 MAYBE?
